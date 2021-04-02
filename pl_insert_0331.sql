@@ -28,6 +28,14 @@ dbms_output.put_line(sql%rowcount||'건 추가됨');
 commit;
 end if;
 
+exception
+ when dup_val_on_index then
+  dbms_output.put_line(empno||'번 사원은 이미 존재합니다');
+  dbms_output.put_line(sqlcode||','||sqlerrm);
+  when others then
+  dbms_output.put_line('ㅈㅅㅈㅅ');
+  dbms_output.put_line(sqlcode||','||sqlerrm);
+
 
 end;
 /
