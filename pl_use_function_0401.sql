@@ -44,3 +44,8 @@ select chk_ssn('123212-1234567')
 from dual;
 
 --난수뽑기:패키지를 사용한 함수 DBMS_RANDOM.value
+select ceil(dbms_random.value(1,10))
+from dual;
+
+select create_ssn('22222','1')
+from dual;
