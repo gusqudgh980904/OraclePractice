@@ -18,7 +18,7 @@ select COUNTRY, MAKER, MODEL,car_year, trim(to_char(PRICE,'999,999,999')) price,
 from (select COUNTRY, cc.MAKER, cma.MODEL, cmo.CAR_YEAR, cmo.PRICE,cmo.car_option,
 						row_number() over(order by cmo.HIREDATE desc) as hiredate_rank
 					from car_country cc,car_maker cma,car_model cmo
-					where (cma.maker(+)=cc.maker and cmo.model(+)=cma.model))
+					where (cma.maker=cc.maker and cmo.model=cma.model))
 where model like i_model and (hiredate_rank between 1 and 10);
 
 end if;
@@ -30,7 +30,7 @@ select COUNTRY, MAKER, MODEL,car_year, trim(to_char(PRICE,'999,999,999')) price,
 from (select COUNTRY, cc.MAKER, cma.MODEL, cmo.CAR_YEAR, cmo.PRICE,cmo.car_option,
 						row_number() over(order by cmo.HIREDATE desc) as hiredate_rank
 					from car_country cc,car_maker cma,car_model cmo
-					where (cma.maker(+)=cc.maker and cmo.model(+)=cma.model))
+					where (cma.maker=cc.maker and cmo.model=cma.model))
 where model like i_model and (hiredate_rank between 11 and 20);
 
 end if;
@@ -42,7 +42,7 @@ select COUNTRY, MAKER, MODEL,car_year, trim(to_char(PRICE,'999,999,999')) price,
 from (select COUNTRY, cc.MAKER, cma.MODEL, cmo.CAR_YEAR, cmo.PRICE,cmo.car_option,
 						row_number() over(order by cmo.HIREDATE desc) as hiredate_rank
 					from car_country cc,car_maker cma,car_model cmo
-					where (cma.maker(+)=cc.maker and cmo.model(+)=cma.model))
+					where (cma.maker=cc.maker and cmo.model=cma.model))
 where model like i_model and (hiredate_rank between 21 and 30);
 
 end if;

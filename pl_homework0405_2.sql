@@ -15,7 +15,6 @@
 -- 실패하면 "xxx사원입력실패"로 결과를 설정한다.
 create or replace procedure emp_ins(empno cp_emp3.empno%type, ename cp_emp3.ename%type, job cp_emp3.job%type, sal cp_emp3.sal%type,
 																		row_cnt out number,msg out varchar2)
-
 is
 
 
@@ -23,7 +22,7 @@ is
 
 begin
 insert into CP_EMP3(empno, ENAME, JOB, SAL)
-values(EMPNO, ENAME, JOB, SAL); 
+values(EMPNO, ENAME, JOB, SAL);
 
 row_cnt:=sql%rowcount;
 

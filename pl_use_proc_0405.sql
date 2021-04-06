@@ -69,7 +69,7 @@ rollback;
 --¼÷Á¦ 1¹ø
 var cur_car refcursor;
 
-exec car_proc('¼Ò·»Åä',1,:cur_car);
+exec car_proc('K5',2,:cur_car);
 
 select * from car_maker;
 
