@@ -10,8 +10,7 @@ public class UseConnection {
 		//1.Driver 로딩
 		try {
 			//외부 Driver(배포된 jar)를 Eclipse에서 인식하도록 만들려면 build path를 설정해야한다
-			//외부 Driver(배포된 jar)를 실행중인 JDK에서 인식하도록 만들려면 class path를 설정해야한다
-			
+			//외부 Driver(배포된 jar)를 실행중인 JDK에서 인식하도록 만들려면 class path를 설정해야한다			
 			Class.forName("oracle.jdbc.OracleDriver");
 			System.out.println("드라이버 로딩 성공");
 		} catch (ClassNotFoundException e) {
@@ -36,11 +35,7 @@ public class UseConnection {
 	}//UseConnection
 	
 	public static void main(String[] args) {
-		new UseConnection();
-		
-		
-		
-		
+		new UseConnection();			
 	}//main
 
 }//class
